@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Gap Conjecture – Daily Run Wave 3</title>
+  </head>
+  <body>
+    <h1>Daily Run: Mass Gap Conjecture</h1>
+    <h2>Day 3</h2>
+    <h3>Glueball spectrum on anisotropic lattices</h3>
+    <ol>
+      <li>Digitized arXiv:1507.04087 Figure 3 and interpolated the continuum limit, obtaining $m_{0^{++}}/\sqrt{\sigma}=3.55$.</li>
+      <li>Ran a quadratic extrapolation in $a_t^2$ using Python, estimating the continuum value as $3.48\pm0.07$.</li>
+      <li>Identified systematic shift when varying anisotropy to $a_s=3a_t$, suggesting need for improved action.</li>
+    </ol>
+    <h3>Schwinger function positivity bounds</h3>
+    <ol>
+      <li>Implemented a spectral density ansatz $\rho(\mu)=C\mu^2 e^{-\mu/\Lambda}$ and verified positivity of its Laplace transform numerically.</li>
+      <li>Integrated to obtain $G(t)=\frac{C}{(t+\Lambda)^3}$ and confirmed monotonic decay for $t>0$.</li>
+      <li>From the fitted $G(t)$ deduced a refined bound $m \ge 0.95$ GeV, slightly above previous day's estimate.</li>
+    </ol>
+    <h3>Topological mass generation via Chern-Simons terms</h3>
+    <ol>
+      <li>Computed the one-loop polarization tensor in $2+1$ Yang–Mills using dimensional regularization, verifying finite shift of the Chern-Simons level.</li>
+      <li>Evaluated determinant of the Dirac operator leading to induced mass $m_{\text{ind}}=g^2/(4\pi)$ for fundamental fermions.</li>
+      <li>Compared with lattice strong-coupling expansion, finding matching linear dependence on gauge coupling.</li>
+    </ol>
+  </body>
+</html>

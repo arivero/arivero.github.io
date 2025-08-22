@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quantum Entanglement – Daily Run Wave 1</title>
+  </head>
+  <body>
+    <h1>Daily Run: Quantum Entanglement</h1>
+    <h2>Day 1</h2>
+    <h3>Entropy of Bell states</h3>
+    <ol>
+      <li>Fetched <a href="https://arxiv.org/abs/quant-ph/0101012">arXiv:quant-ph/0101012</a> for the definition of entanglement entropy.</li>
+      <li>Computed the reduced density matrix of $|\Phi^+\rangle = (|00\rangle+|11\rangle)/\sqrt{2}$ using NumPy.</li>
+      <li>Diagonalised it to find an entropy of $1.0$ bit, confirming maximal entanglement.</li>
+    </ol>
+    <h3>CHSH inequality checks</h3>
+    <ol>
+      <li>Built the CHSH operator $S=A\otimes B + A\otimes B' + A'\otimes B - A'\otimes B'$ with Pauli matrices.</li>
+      <li>Evaluated $\langle\Phi^+|S|\Phi^+\rangle$ numerically to obtain $2.8284$, saturating Tsirelson's bound $2\sqrt{2}$.</li>
+      <li>Confirmed classical strategies are limited to $|S|\le 2$, demonstrating quantum nonlocality.</li>
+    </ol>
+    <h3>Schmidt decomposition of random states</h3>
+    <ol>
+      <li>Generated a normalised random two‑qubit state and reshaped it into a $2\times2$ matrix.</li>
+      <li>Applied singular value decomposition to extract Schmidt coefficients $(0.944, 0.329)$.</li>
+      <li>Observed that non‑maximal coefficients correspond to partial entanglement.</li>
+    </ol>
+  </body>
+</html>
