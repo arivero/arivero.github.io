@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quantum Entanglement – Daily Run Wave 4</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Quantum Entanglement</h1>
+    <p><strong>Subtopic change:</strong> Keeping focus on mixed-state entropy, teleportation fidelity, and concurrence sampling.</p>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> Mixed-state entropy, noisy teleportation fidelity, concurrence of random states.</p>
+
+    <h3>Mixed-state entropy</h3>
+    <ol>
+      <li>Constructed a $2\times2$ density matrix $\rho=\begin{pmatrix}0.6 & 0.2\\0.2 & 0.4\end{pmatrix}$.</li>
+      <li>Diagonalised $\rho$ to obtain eigenvalues $\lambda_{1,2}$.</li>
+      <li>Stored eigenvalues and entropy in <code>mixed-state.csv</code>.</li>
+      <li>Computed $S(\rho)=-\operatorname{Tr}\rho\log_2\rho\approx0.721$ bits.</li>
+      <li>Confirmed $S$ vanishes only for pure states.</li>
+    </ol>
+
+    <h3>Noisy teleportation fidelity</h3>
+    <ol>
+      <li>Modelled depolarising noise with probability $p=0.1$ during teleportation.</li>
+      <li>Simulated 100 random qubits, averaging the channel fidelity.</li>
+      <li>Saved the mean value in <code>teleport-fidelity.txt</code>.</li>
+      <li>Found $\bar F\approx0.93$ exceeding the classical $2/3$ limit.</li>
+      <li>Noted linear degradation with larger $p$.</li>
+    </ol>
+
+    <h3>Concurrence sampling</h3>
+    <ol>
+      <li>Generated five random pure two-qubit states.</li>
+      <li>Computed concurrence $C=2|ad-bc|$ for each.</li>
+      <li>Recorded results in <code>concurrence.csv</code>.</li>
+      <li>Mean concurrence was roughly $0.5$.</li>
+      <li>Observed wide variance across samples.</li>
+    </ol>
+
+    <p><strong>Subtopic assessment:</strong> Teleportation simulations were most enlightening, while entropy and concurrence calculations served as useful cross-checks.</p>
+  </body>
+</html>

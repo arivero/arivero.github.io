@@ -15,3 +15,5 @@ After running the script you can compile `example.tex` with `pdflatex` or `pando
 ## Testing
 
 Running `npm test` currently fails because no `package.json` is present.
+
+Last npm test run: ENOENT error confirming the missing `package.json`.

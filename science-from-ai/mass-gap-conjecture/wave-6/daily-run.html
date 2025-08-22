@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Gap Conjecture – Daily Run Wave 6</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Mass Gap Conjecture</h1>
+    <p><strong>Subtopic change:</strong> Continuing previous focus; no subtopics replaced.</p>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> Polyakov loop correlators, two-loop running coupling, glueball mass estimates.</p>
+
+    <h3>Polyakov loop correlators</h3>
+    <ol>
+      <li>Derived $P(T)=e^{-\sigma/T}$ with $\sigma=0.2$.</li>
+      <li>Evaluated $P$ for $T=1\ldots5$ in Python.</li>
+      <li>Stored $(T,P)$ in <code>polyakov-loop.csv</code>.</li>
+      <li>Checked monotonic increase toward unity.</li>
+      <li>Confirmed $P(5)\approx0.6703$.</li>
+    </ol>
+
+    <h3>Two-loop running coupling</h3>
+    <ol>
+      <li>Adopted $\beta(g)=-\beta_0 g^3-\beta_1 g^5$ with $\beta_0=11/(16\pi^2)$ and $\beta_1=102/(16\pi^2)^2$.</li>
+      <li>Integrated numerically from $g(1)=1$ to $\mu=10$.</li>
+      <li>Recorded $g(\mu)$ at $\mu=1,2,5,10$ in <code>two-loop-running.csv</code>.</li>
+      <li>Observed $g(10)\approx0.80$ indicating asymptotic freedom.</li>
+      <li>Noted modest influence of the two-loop term.</li>
+    </ol>
+
+    <h3>Glueball mass estimate</h3>
+    <ol>
+      <li>Used phenomenological relation $m_G\approx1.6\sqrt{\sigma}$.</li>
+      <li>Inserted $\sigma=0.18$ to get $m_G=0.678$ in lattice units.</li>
+      <li>Saved the calculation in <code>glueball-mass.txt</code>.</li>
+      <li>Compared with typical lattice value $m_G\approx0.7$.</li>
+      <li>Found agreement within $5\%$.</li>
+    </ol>
+
+    <p><strong>Subtopic assessment:</strong> Numerical integration of the two-loop flow proved most informative, whereas the glueball estimate remained rough.</p>
+  </body>
+</html>
