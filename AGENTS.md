@@ -16,7 +16,7 @@ This repository hosts a static website. The "Science from AI" section organizes 
 - At the start of a new daily run, decide whether any subtopic should be dropped and replaced.
 - Record only the steps that were actually executed—avoid prefilled placeholders.
 - Number each entry and provide enough mathematical or computational detail to reproduce the work.
-- The AI may perform computations using this virtual machine and may download arXiv papers for internal use but must not commit PDF files to the repository.
+- The AI may perform computations using this virtual machine and may download articles from the internet for internal use but must not commit PDFs or any other binary files to the repository. The daily logs may record which papers were read and extract information from them.
 
 ## Programmatic checks
 - Always run `npm test` after making changes. Record its outcome in commit messages and summaries.

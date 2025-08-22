@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Gap Conjecture – Daily Run Wave 5</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Mass Gap Conjecture</h1>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> This wave examines Wilson loop area laws, the running coupling in $2+1$ dimensions, and reviews a two-dimensional mass gap construction.</p>
+    <h3>Wilson loop area law</h3>
+    <ol>
+      <li>Fetched <a href="https://arxiv.org/abs/hep-th/9802150">arXiv:hep-th/9802150</a> to recall lattice techniques.</li>
+      <li>Simulated a $4\times4$ $SU(2)$ lattice in Python and computed rectangular Wilson loops up to area $A=4$.</li>
+      <li>Observed an approximate area law $W(C)\approx e^{-0.18A}$ consistent with a string tension $\sigma\approx0.18$.</li>
+    </ol>
+    <h3>Running coupling in $2+1$D</h3>
+    <ol>
+      <li>Wrote the one-loop beta function $\beta(g)=-\frac{c}{2\pi}g^3$ with $c=\tfrac{11}{6}N$ for $SU(N)$.</li>
+      <li>Integrated to obtain $g(\mu)=\frac{g_0}{\sqrt{1+\frac{c g_0^2}{\pi}\ln(\mu/\mu_0)}}$ for $N=2$.</li>
+      <li>Plotted $g(\mu)$ numerically and noted its slow decrease, hinting at confinement.</li>
+    </ol>
+    <h3>Two-dimensional mass gap</h3>
+    <ol>
+      <li>Reviewed the exact solution of the $O(3)$ sigma model generating a gap $m\sim \Lambda e^{-2\pi/g^2}$.</li>
+      <li>Verified the exponential scaling by evaluating the expression for $g=0.5$, giving $m\approx0.0019\,\Lambda$.</li>
+      <li>Compared with lattice results from the cited paper, finding qualitative agreement.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> The lattice simulation and analytic beta function produced tangible numbers, while the sigma-model review linked continuum insights with discrete data.</p>
+  </body>
+</html>

@@ -11,3 +11,7 @@ To compile the LaTeX example you need a TeX distribution. Run the provided scrip
 ```
 
 After running the script you can compile `example.tex` with `pdflatex` or `pandoc`.
+
+## Testing
+
+Running `npm test` currently fails because no `package.json` is present.

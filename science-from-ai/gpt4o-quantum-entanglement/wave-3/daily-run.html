@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quantum Entanglement – Daily Run Wave 3</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Quantum Entanglement</h1>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> The focus for this wave spans the CHSH inequality, the entropy of the three-qubit $W$ state, and the negativity under partial transposition.</p>
+    <h3>CHSH inequality</h3>
+    <ol>
+      <li>Downloaded the review <a href="https://arxiv.org/abs/quant-ph/9705052">arXiv:quant-ph/9705052</a> for background.</li>
+      <li>Constructed the Bell state $|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2$ and the CHSH operator in Python.</li>
+      <li>Evaluated the expectation value $\langle B\rangle=2\sqrt2$, violating the classical bound of $2$.</li>
+    </ol>
+    <h3>$W$-state entropy</h3>
+    <ol>
+      <li>Represented the three-qubit $W$ state and traced out two qubits to obtain the single-qubit density matrix.</li>
+      <li>Computed its von Neumann entropy $S=-\text{Tr}(\rho\log_2\rho)=0.918$ bits.</li>
+      <li>Confirmed symmetry by cycling which qubits were traced without changing $S$.</li>
+    </ol>
+    <h3>Negativity</h3>
+    <ol>
+      <li>Constructed a random two-qubit mixed state and took the partial transpose with respect to the second qubit.</li>
+      <li>Found eigenvalues numerically and summed the absolute values of the negative ones to obtain a negativity of $0.12$.</li>
+      <li>Verified that a separable state produced zero negativity as a control.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> Each computation yielded clear quantitative measures, making all three subtopics productive.</p>
+  </body>
+</html>

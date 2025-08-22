@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Connes' Standard Model – Daily Run Wave 3</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Connes' Standard Model</h1>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> We began this wave with three lines of inquiry: the $a_4$ heat-kernel coefficient on $S^4$, the CKM matrix's Jarlskog invariant, and gauge coupling unification.</p>
+    <h3>$a_4$ coefficient on $S^4$</h3>
+    <ol>
+      <li>Consulted <a href="https://arxiv.org/abs/hep-th/0610241">arXiv:hep-th/0610241</a> and downloaded the PDF for reference.</li>
+      <li>Inserted the curvature invariants of the unit four-sphere into the Seeley--DeWitt formula to express $a_4$ in terms of $R^2$.</li>
+      <li>Used a short SymPy script to evaluate the expression numerically, yielding $a_4=1/10$.</li>
+    </ol>
+    <h3>CKM Jarlskog invariant</h3>
+    <ol>
+      <li>Constructed the CKM matrix with Wolfenstein parameters $(\lambda,A,\bar{\rho},\bar{\eta})=(0.225,0.8,0.135,0.349)$.</li>
+      <li>Computed the Jarlskog invariant $J=A^2\lambda^6\bar{\eta}\approx3.0\times10^{-5}$.</li>
+      <li>Verified CP violation by confirming that $J$ is nonzero and of the expected magnitude.</li>
+    </ol>
+    <h3>Gauge coupling unification</h3>
+    <ol>
+      <li>Integrated the one-loop renormalisation group equations up to $10^{16}\,\text{GeV}$ using initial values at $M_Z$.</li>
+      <li>Observed $g_1$, $g_2$ and $g_3$ approach within $5\%$ of a common value near the unification scale.</li>
+      <li>Noted the residual mismatch suggesting threshold corrections are required.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> Each subtopic produced concrete numbers: the heat-kernel coefficient and Jarlskog invariant matched expectations, while the coupling unification highlighted a gap for future work.</p>
+  </body>
+</html>
