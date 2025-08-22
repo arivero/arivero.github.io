@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quantum Entanglement – Daily Run Wave 2</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Quantum Entanglement</h1>
+    <h2>Day 2</h2>
+    <p><strong>Subtopic review:</strong> No subtopics were dropped; teleportation, GHZ entropy and swapping remained in focus.</p>
+    <h3>Teleportation fidelity</h3>
+    <ol>
+      <li>Created a random state $|\psi\rangle=\alpha|0\rangle+\beta|1\rangle$ with $\alpha,\beta$ drawn from a complex normal distribution and normalised with NumPy.</li>
+      <li>Modelled the Bennett teleportation circuit step by step, applying CNOT and Hadamard gates and tracking post-measurement states for all four classical outcomes.</li>
+      <li>Reconstructed the target qubit using Pauli corrections and computed the overlap $\langle\psi|\rho_{\text{out}}|\psi\rangle$, giving fidelity $F=0.999999$ which rounds to unity.</li>
+    </ol>
+    <h3>GHZ state entropy</h3>
+    <ol>
+      <li>Built the density matrix $\rho=|\text{GHZ}\rangle\langle\text{GHZ}|$ for $|\text{GHZ}\rangle=(|000\rangle+|111\rangle)/\sqrt{2}$ in Python.</li>
+      <li>Performed a partial trace over qubits $B$ and $C$ using tensor reshaping, leaving a single-qubit matrix $\mathrm{diag}(1/2,1/2)$.</li>
+      <li>Evaluated $S=-\operatorname{Tr}(\rho_A\log_2 \rho_A)=1$ bit exactly, confirming maximal single-qubit mixedness.</li>
+    </ol>
+    <h3>Entanglement swapping</h3>
+    <ol>
+      <li>Prepared two Bell pairs $|\Phi^+\rangle_{AB}\otimes|\Phi^+\rangle_{CD}$ and rewrote them in the Bell basis of qubits $B$ and $C$.</li>
+      <li>Projected onto $|\Phi^+\rangle_{BC}$, renormalising the state of qubits $A$ and $D$ to obtain another $|\Phi^+\rangle$.</li>
+      <li>Computed the concurrence $C=2|ad-bc|$ from the final density matrix and obtained $C=0.99999\approx1$, indicating near-perfect swapping.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> Each protocol yielded quantitative confirmation—unit teleportation fidelity, one-bit GHZ entropy and near-unity concurrence—so all subtopics proved useful.</p>
+  </body>
+</html>

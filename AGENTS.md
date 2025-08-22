@@ -12,6 +12,8 @@ This repository hosts a static website. The "Science from AI" section organizes 
 
 ## Research logs
 - Daily run pages log progress across **three subtopics**.
+- Conclude each daily run with an assessment of how productive each subtopic was.
+- At the start of a new daily run, decide whether any subtopic should be dropped and replaced.
 - Record only the steps that were actually executed—avoid prefilled placeholders.
 - Number each entry and provide enough mathematical or computational detail to reproduce the work.
 - The AI may perform computations using this virtual machine and may download arXiv papers for internal use but must not commit PDF files to the repository.

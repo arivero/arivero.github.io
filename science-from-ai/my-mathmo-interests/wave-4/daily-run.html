@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 4</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <h2>Day 4</h2>
+    <p><strong>Subtopic review:</strong> Graph coloring, partition asymptotics and continued fractions all survived the initial evaluation—no replacements were needed.</p>
+    <h3>Graph coloring counts</h3>
+    <ol>
+      <li>Recalled that the cycle graph $C_n$ has chromatic polynomial $\chi_{C_n}(k)=(k-1)^n+(-1)^n(k-1)$ and substituted $n=5$, $k=3$.</li>
+      <li>Evaluated the expression with SymPy to get $(2)^5-2=32-2=30$ valid colourings, confirming by brute force enumeration.</li>
+      <li>Documented the script and checked that no edge has equal colours in the generated assignments.</li>
+    </ol>
+    <h3>Partition number asymptotics</h3>
+    <ol>
+      <li>Computed the exact partition number $p(100)$ using SymPy's `partition` function, obtaining $190{,}569{,}292$.</li>
+      <li>Applied the Hardy–Ramanujan formula $p(n)\approx \frac{1}{4n\sqrt{3}}e^{\pi\sqrt{2n/3}}$ at $n=100$, producing $1.99\times10^8$.</li>
+      <li>Compared the two values, finding a relative error of $4.6\%$, which showcases the accuracy of the asymptotic for $n=100$.</li>
+    </ol>
+    <h3>Continued fraction of $\sqrt{3}$</h3>
+    <ol>
+      <li>Ran the standard continued fraction algorithm on $\sqrt{3}$ with high precision to reveal the repeating block.</li>
+      <li>Observed the expansion $\sqrt{3}=[1;\overline{1,2}]$, recording the first five terms as $[1,1,2,1,2]$.</li>
+      <li>Verified periodicity by checking that the remainder after the second term returns to $\sqrt{3}+1$, indicating the cycle $(1,2)$.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> Each subtopic produced concrete numerical or structural results, so they are kept for the next session.</p>
+  </body>
+</html>

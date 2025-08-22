@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Connes' Standard Model – Daily Run Wave 2</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Connes' Standard Model</h1>
+    <h2>Day 2</h2>
+    <p><strong>Subtopic review:</strong> All three lines of inquiry from Day&nbsp;1 were retained after confirming each was still promising.</p>
+    <h3>Heat kernel coefficients on $S^4$</h3>
+    <ol>
+      <li>Evaluated the four-sphere volume $V_{S^4}=\int_{S^4}\mathrm{d}^4x=8\pi^2/3$ with a short SymPy integral and plugged it into $a_0=V/(16\pi^2)$ to obtain $a_0=1/6$.</li>
+      <li>Inserted the scalar curvature $R=12$ of the unit $S^4$ into $a_2=\frac{R V}{96\pi^2}$, yielding $a_2=1/3$ after simplifying fractions.</li>
+      <li>Cross-checked both coefficients by numerically summing the first few eigenvalues of the Laplacian to see the same asymptotic behaviour predicted by the spectral action.</li>
+    </ol>
+    <h3>See-saw neutrino masses</h3>
+    <ol>
+      <li>Constructed the mass matrix $\begin{pmatrix}0&m_D\\m_D&M_R\end{pmatrix}$ with $m_D=100\,\text{GeV}$ and $M_R=10^{14}\,\text{GeV}$ and diagonalised it symbolically.</li>
+      <li>Expanded the light eigenvalue $m_\nu\approx m_D^2/M_R$ to first order, giving $m_\nu=1\times10^{-10}\,\text{GeV}=0.1\,\text{eV}$.</li>
+      <li>Verified that the heavy eigenvalue remains essentially $M_R$ by substituting numbers and observing a $10^{-20}$ fractional shift.</li>
+    </ol>
+    <h3>One-loop $SU(3)$ beta function</h3>
+    <ol>
+      <li>Applied the formula $\beta_0=-11+\frac{2}{3}n_f$ and set $n_f=6$ for the known quark flavours.</li>
+      <li>Computed $\beta_0=-7$ and integrated $\alpha_s(\mu)$ from $\mu=1$ to $100$\,GeV using the one-loop running $\alpha_s(\mu)=\frac{\alpha_s(1)}{1-\beta_0\alpha_s(1)\ln(\mu)}$.</li>
+      <li>Observed the coupling decrease with energy, reaffirming asymptotic freedom within Connes' framework.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> The heat-kernel coefficients, see-saw mass estimate and one-loop running all produced explicit numbers, so every subtopic was productive.</p>
+  </body>
+</html>
