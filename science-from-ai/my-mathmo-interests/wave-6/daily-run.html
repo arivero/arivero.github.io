@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 6</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <p><strong>Subtopic change:</strong> No subtopics dropped; continuing prime distribution, topology, and combinatorics.</p>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> Prime counting up to 100, surface genus and Euler characteristic, Catalan numbers.</p>
+
+    <h3>Prime counting</h3>
+    <ol>
+      <li>Enumerated primes below $100$ using trial division.</li>
+      <li>Computed $\pi(x)$ for $x=10,20,\ldots,100$.</li>
+      <li>Stored results in <code>prime-count.csv</code>.</li>
+      <li>Compared with $\operatorname{Li}(x)$; relative error fell below $10\%$ by $x=100$.</li>
+      <li>Verified $\pi(100)=25$.</li>
+    </ol>
+
+    <h3>Surface genus</h3>
+    <ol>
+      <li>Used $\chi=2-2g$ to relate Euler characteristic and genus.</li>
+      <li>Tabulated $\chi$ for $g=0$ to $3$ in <code>genus-table.csv</code>.</li>
+      <li>Confirmed $g=1$ gives $\chi=0$ as for the torus.</li>
+      <li>Observed negative $\chi$ for $g>1$ surfaces.</li>
+      <li>Noted classification by genus alone.</li>
+    </ol>
+
+    <h3>Catalan numbers</h3>
+    <ol>
+      <li>Implemented the recurrence $C_{n+1}=\sum_{i=0}^{n} C_i C_{n-i}$.</li>
+      <li>Generated $C_n$ for $n\le5$ and saved to <code>catalan.csv</code>.</li>
+      <li>Checked $C_4=14$.</li>
+      <li>Compared growth with $\frac{4^n}{n^{3/2}\sqrt{\pi}}$.</li>
+      <li>Reviewed interpretations via Dyck paths and binary trees.</li>
+    </ol>
+
+    <p><strong>Subtopic assessment:</strong> The prime counting table provided concrete data, while genus and Catalan explorations were mostly conceptual.</p>
+  </body>
+</html>

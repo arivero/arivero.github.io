@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Neuroscience of Learning – Daily Run Wave 1</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Neuroscience of Learning</h1>
+    <p><strong>Subtopic change:</strong> Initial wave introducing Hebbian plasticity, spike-timing dependent plasticity, and memory consolidation.</p>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> Hebbian weight updates, STDP curve, literature on memory consolidation.</p>
+
+    <h3>Hebbian plasticity</h3>
+    <ol>
+      <li>Simulated two binary neurons with update $\Delta w=\eta xy$ and $\eta=0.1$.</li>
+      <li>Ran ten random input pairs, tracking the weight.</li>
+      <li>Stored the trajectory in <code>hebbian.csv</code>.</li>
+      <li>Observed monotonic growth when spikes co-occurred.</li>
+      <li>Considered adding normalization to bound $w$.</li>
+    </ol>
+
+    <h3>Spike-timing dependent plasticity</h3>
+    <ol>
+      <li>Adopted $\Delta w=\pm e^{-\lvert\Delta t\rvert/\tau}$ with $\tau=20$\,ms.</li>
+      <li>Evaluated $\Delta w$ for $\Delta t=-20,-10,0,10,20$\,ms.</li>
+      <li>Saved the table to <code>stdp.csv</code>.</li>
+      <li>Confirmed potentiation for $\Delta t<0$ and depression for $\Delta t>0$.</li>
+      <li>Noted the exponential decay away from coincidence.</li>
+    </ol>
+
+    <h3>Memory consolidation</h3>
+    <ol>
+      <li>Reviewed a summary article on hippocampal replay during sleep.</li>
+      <li>Highlighted evidence linking slow-wave activity to long-term storage.</li>
+      <li>Related replay to experience replay in reinforcement learning.</li>
+      <li>Identified candidate models for future simulation.</li>
+      <li>Planned to test a simple replay algorithm next wave.</li>
+    </ol>
+
+    <p><strong>Subtopic assessment:</strong> The Hebbian and STDP simulations produced concrete data, while the consolidation review charted directions for upcoming computation.</p>
+  </body>
+</html>

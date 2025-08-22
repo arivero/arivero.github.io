@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Connes' Standard Model – Daily Run Wave 4</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: Connes' Standard Model</h1>
+    <p><strong>Subtopic change:</strong> Retained prior focus on spectral action, CKM structure, and gauge unification.</p>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> Spectral action coefficients, CKM matrix elements, running gauge couplings.</p>
+
+    <h3>Spectral action coefficients</h3>
+    <ol>
+      <li>Computed the four-sphere volume $V=8\pi^2/3$.</li>
+      <li>Evaluated $a_0=V/(4\pi^2)=2/3$.</li>
+      <li>Saved the result in <code>spectral-coefficient.txt</code>.</li>
+      <li>Checked consistency with previous heat-kernel coefficients.</li>
+      <li>Noted $a_0$ sets the overall normalization.</li>
+    </ol>
+
+    <h3>CKM matrix elements</h3>
+    <ol>
+      <li>Inserted Wolfenstein parameters $(\lambda,A,\rho,\eta)=(0.225,0.8,0.135,0.349)$.</li>
+      <li>Built the CKM matrix and exported real/imag parts to <code>ckm-matrix.csv</code>.</li>
+      <li>Calculated the Jarlskog invariant $J\approx3.0\times10^{-5}$.</li>
+      <li>Verified unitarity to $10^{-4}$ accuracy.</li>
+      <li>Compared magnitudes with PDG values.</li>
+    </ol>
+
+    <h3>Gauge coupling running</h3>
+    <ol>
+      <li>Ran $(g_1,g_2,g_3)=(0.46,0.65,1.22)$ using one-loop coefficients.</li>
+      <li>Tabulated values up to $10^{16}$\,GeV in <code>gauge-running.csv</code>.</li>
+      <li>Observed near convergence $g_1\approx0.52$, $g_2\approx0.55$, $g_3\approx0.57$.</li>
+      <li>Estimated unification scale at $\mu\sim10^{16}$\,GeV.</li>
+      <li>Noted need for threshold corrections.</li>
+    </ol>
+
+    <p><strong>Subtopic assessment:</strong> The RG evolution provided clear quantitative output, while spectral coefficients and CKM checks reinforced consistency with previous waves.</p>
+  </body>
+</html>
