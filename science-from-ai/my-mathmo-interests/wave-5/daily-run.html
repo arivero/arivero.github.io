@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 5</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <h2>Day 1</h2>
+    <p><strong>Subtopics:</strong> This wave explores Catalan numbers, hyperbolic geometry, and prime reciprocal sums.</p>
+    <h3>Catalan numbers</h3>
+    <ol>
+      <li>Downloaded <a href="https://arxiv.org/abs/math/0405410">arXiv:math/0405410</a> for a refresher on combinatorial interpretations.</li>
+      <li>Computed $C_5=\frac{1}{6}\binom{10}{5}=42$ using Python's factorial function.</li>
+      <li>Verified the recurrence $C_{n+1}=\sum_{k=0}^{n}C_kC_{n-k}$ by plugging in $n=4$ and reproducing $42$.</li>
+      <li>Enumerated lattice paths for $n=3$ as a sanity check.</li>
+      <li>Noted how Catalan numbers count binary tree shapes.</li>
+    </ol>
+    <h3>Hyperbolic triangle area</h3>
+    <ol>
+      <li>Used the formula $A=\pi-(\alpha+\beta+\gamma)$ with angles $(\alpha,\beta,\gamma)=(\frac{\pi}{3},\frac{\pi}{4},\frac{\pi}{6})$.</li>
+      <li>Converted to radians and summed to $7\pi/12$.</li>
+      <li>Computed $A=\pi/6$ and confirmed with a numerical hyperbolic geometry package.</li>
+      <li>Explored how area shrinks as angles grow while staying below $\pi$.</li>
+      <li>Sketched the triangle on the Poincaré disk for intuition.</li>
+    </ol>
+    <h3>Sum of prime reciprocals</h3>
+    <ol>
+      <li>Generated primes up to $100$ with a sieve algorithm.</li>
+      <li>Saved the primes and reciprocals to <code>prime-reciprocals.csv</code>.</li>
+      <li>Summed the reciprocals to obtain $\sum_{p\le100}1/p\approx2.034$.</li>
+      <li>Compared with $\ln\ln 100 + 0.261$ to confirm Mertens' approximation.</li>
+      <li>Observed the slow divergence by extending the cutoff to $200$ and noting only a modest increase.</li>
+    </ol>
+    <p><strong>Subtopic assessment:</strong> The combinatorial computation, geometric area, and number-theoretic sum all yielded explicit values, marking each subtopic as productive.</p>
+  </body>
+</html>
