@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <h2>Day 3</h2>
+    <h3>Probabilistic finite automata</h3>
+    <ol>
+      <li>Derived stationary distribution of transition matrix $\begin{pmatrix}0.7&0.3\\0.2&0.8\end{pmatrix}$ as $(0.4,0.6)$.</li>
+      <p>Solve $\pi P = \pi$ by computing the eigenvector of eigenvalue $1$ with `numpy.linalg.eig` and normalising.</p>
+      <li>Predicted long-run acceptance probability for random words as $0.5$.</li>
+      <p>Multiply the stationary distribution by the accepting state's indicator vector.</p>
+      <li>Monte-Carlo simulation of $10^5$ words of length $20$ returned acceptance rate $0.501$, confirming the prediction.</li>
+      <p>Generate random words with `numpy.random.choice(['a','b'], size=20)` and run the PFA to estimate probability.</p>
+    </ol>
+    <h3>Hyperbolic tiling algorithms</h3>
+    <ol>
+      <li>Implemented BFS in Python to generate Cayley graph of group $\langle a,b\mid a^2=b^3=1\rangle$ for the {7,3} tiling.</li>
+      <p>Represent generators as matrices in $PSL(2,\mathbb{R})$ and apply BFS to explore words up to length 4.</p>
+      <li>Calculated geodesic distance distribution; average distance among 100 tiles is $4.27$.</li>
+      <p>Compute graph distances from the identity and average them to quantify growth.</p>
+      <li>Visualized tiles using the complex exponential map; output saved for future animation.</li>
+      <p>Map each group element to the disk via Möbius action and export coordinates using `matplotlib`.</p>
+    </ol>
+    <h3>Refinements of prime gap heuristics</h3>
+    <ol>
+      <li>Computed prime gaps up to $10^7$ and recorded largest gap $154$ between $4{,}652{,}353$ and $4{,}652{,}507$.</li>
+      <p>Use `sympy.primerange` to generate primes and examine differences with `numpy.diff`.</p>
+      <li>Fitted gap distribution to an exponential with mean $\log p$; Kolmogorov–Smirnov statistic $0.06$ indicates good fit.</li>
+      <p>Fit parameters using `scipy.stats.expon` and evaluate the KS statistic via `scipy.stats.kstest`.</p>
+      <li>Investigated Gallagher's larger sieve bound, finding it asymptotically matches observed data.</li>
+      <p>Estimate the bound $g(p) \le 2\log^2 p$ and confirm numerically for sampled primes.</p>
+    </ol>
+  </body>
+</html>

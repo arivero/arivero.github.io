@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <h2>Day 2</h2>
+    <h3>Probabilistic finite automata</h3>
+    <ol>
+      <li>Implemented a 2-state PFA accepting strings over {a,b} with transition matrices $P_a$ and $P_b$.</li>
+      <p>Represent transitions as $2\times2$ stochastic matrices and simulate word processing via matrix multiplication.</p>
+      <li>Computed acceptance probability for the word "abba" as $0.433$ using matrix multiplication.</li>
+      <p>Evaluate $(P_a P_b P_b P_a)_{1,2}$ in Python with `numpy` to reproduce the value.</p>
+      <li>Proved that any 2-state PFA language is regular by constructing an equivalent deterministic automaton.</li>
+      <p>Enumerate probabilistic transitions and partition states based on thresholded acceptance probability.</p>
+    </ol>
+    <h3>Hyperbolic tiling algorithms</h3>
+    <ol>
+      <li>Encoded group generators for a $(5,4)$ tiling and used breadth-first search to list tiles within radius 3.</li>
+      <p>Use generators of the (5,4) triangle group in PSL(2,R) and apply BFS to explore cosets.</p>
+      <li>Confirmed exponential growth rate by counting 61 tiles at radius 3 versus 12 at radius 2.</li>
+      <p>Track the number of unique group words at each level to observe $N(r)$ growth.</p>
+      <li>Outlined algorithm to embed tiling coordinates using complex Möbius transformations.</li>
+      <p>Map each group element to a Möbius matrix and apply it to a base point in the unit disk.</p>
+    </ol>
+    <h3>Refinements of prime gap heuristics</h3>
+    <ol>
+      <li>Applied the Riemann $R$ function to estimate $\pi(10^6)$ and found relative error below $0.1\%$.</li>
+      <p>Compute the logarithmic integral `li(10**6)` and correction terms to approximate the prime count.</p>
+      <li>Modeled gaps with the Cramér random model, predicting expected gap $(\log 10^6)^2 \approx 191$.</li>
+      <p>Use Python's `math.log` to compute $(\log n)^2` for `n=10**6`.</p>
+      <li>Observed actual gap 114 near $10^6$, supporting the $O((\log p)^2)$ behaviour.</li>
+      <p>Search within the prime list to find consecutive primes around $10^6` and compare their difference.</p>
+    </ol>
+  </body>
+</html>

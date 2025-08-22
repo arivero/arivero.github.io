@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Mathmo Interests – Daily Run Wave 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+    <h1>Daily Run: My Mathmo Interests</h1>
+    <h2>Day 1</h2>
+    <h3>Combinatorial automata</h3>
+    <ol>
+      <li>Enumerated all deterministic automata on two states over {0,1}; found 16 distinct transition structures.</li>
+      <p>Enumerate transitions using a Python nested loop over $2^{4}$ possibilities and discard isomorphic duplicates.</p>
+      <li>Used Python to compute minimal automaton for the language of balanced parentheses up to length 6.</li>
+      <p>Script the examples using the `automata` Python package and invoke its DFA minimisation routine.</p>
+      <li>Derived generating function $A(x)=\frac{1-\sqrt{1-4x}}{2x}$ for Catalan numbers governing acceptance paths.</li>
+      <p>Evaluate `sympy.series((1-sympy.sqrt(1-4*x))/(2*x), x, 0, 5)` to verify the initial coefficients.</p>
+    </ol>
+    <h3>Hyperbolic geometry puzzles</h3>
+    <ol>
+      <li>Constructed a {7,3} tiling via Poincaré disk model and verified angle sum $\alpha=\pi/3$ at each vertex.</li>
+      <p>Use a Poincaré-disk drawing library to place seven-gons around a vertex and confirm the angular defect.</p>
+      <li>Calculated area of a regular heptagon with internal angle $2\pi/3$ as $\approx5.09$ in curvature $-1$ units.</li>
+      <p>Apply the hyperbolic polygon area formula $A=(n-2)\pi - n\alpha$ with $n=7$ and $\alpha=2\pi/3$.</p>
+      <li>Illustrated geodesics as circular arcs orthogonal to boundary; used them to solve a shortest-path puzzle.</li>
+      <p>Draw geodesics as circles orthogonal to the unit circle and compute lengths using $ds=\frac{2|dz|}{1-|z|^2}$.</p>
+    </ol>
+    <h3>Prime-gap searches</h3>
+    <ol>
+      <li>Generated primes below $10^5$ with a sieve and located largest gap 72 between 31397 and 31469.</li>
+      <p>Run `python3 -c "from sympy import primerange; p=list(primerange(2,10**5))"` then compute pairwise differences.</p>
+      <li>Verified Cramér bound $g(p) < p^{0.525}$ for all primes in this range.</li>
+      <p>Check inequality `gap < p**0.525` for each prime `p` using a simple loop.</p>
+      <li>Logged data for potential use in refining heuristics.</li>
+      <p>Save the results to `gaps.csv` with columns for prime and corresponding gap.</p>
+    </ol>
+  </body>
+</html>

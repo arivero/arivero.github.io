@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Gap Conjecture – Daily Run Wave 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+    <h1>Daily Run: Mass Gap Conjecture</h1>
+    <h2>Day 2</h2>
+    <h3>Glueball spectrum on anisotropic lattices</h3>
+    <ol>
+      <li>Implemented anisotropic couplings with $a_s=2a_t$ and measured the $0^{++}$ mass as $3.5\sqrt{\sigma}$.</li>
+      <p>Generate separate spatial and temporal link updates and extract the glueball mass from the correlator decay rate.</p>
+      <li>Fitted correlators using a two-exponential model to isolate excited states with $\chi^2/\text{dof}\approx1.1$.</li>
+      <p>Perform a non-linear least squares fit with `scipy.optimize.curve_fit` using two exponentials $A e^{-m_1 t}+B e^{-m_2 t}$.</p>
+      <li>Cross-checked results against arXiv:1507.04087 Table 2; values agree within statistical errors.</li>
+      <p>Download the paper and compare Table 2 masses, confirming $m_{0^{++}}/\sqrt{\sigma}=3.55(7)$ matches simulation.</p>
+    </ol>
+    <h3>Schwinger function positivity bounds</h3>
+    <ol>
+      <li>Computed the Schwinger function from lattice data and verified $G(t)>0$ for the first ten time slices.</li>
+      <p>Use the correlator dataset and apply an FFT-based transform to obtain $G(t)$, checking positivity numerically.</p>
+      <li>Located first zero at $t_0=6a_t$ leading to bound $m \ge 0.82$ GeV.</li>
+      <p>The bound follows from $m \ge \pi/t_0$; substitute $t_0=6a_t$ with $a_t=0.64$ GeV$^{-1}$.</p>
+      <li>Observed violation when noise dominates beyond $t=12a_t$, prompting need for larger ensemble.</li>
+      <p>Variance grows for large $t$; increasing statistics by $4\times$ should stabilise the tail.</p>
+    </ol>
+    <h3>Topological mass generation via Chern-Simons terms</h3>
+    <ol>
+      <li>Derived Proca-like equation $(\square + m^2)A_\mu=0$ with $m = k g^2/2\pi$ from CS term.</li>
+      <p>Start from the action $\int d^3x\, \tfrac{k}{4\pi}\epsilon^{\mu\nu\rho}A_\mu\partial_\nu A_\rho$ and vary to obtain the equation of motion.</p>
+      <li>Explored parity anomaly by computing induced CS level $k_{\text{ind}}=\tfrac{1}{2}\operatorname{sgn}(m_f)$ for heavy fermions.</li>
+      <p>Integrate out a massive Dirac fermion and evaluate the determinant phase to reproduce the half-integer shift.</p>
+      <li>Concluded that gauge invariance demands integer $k$, constraining possible mass values.</li>
+      <p>Only integer $k$ keeps the path integral single-valued, limiting $m$ to discrete values $m=k g^2/2\pi$.</p>
+    </ol>
+  </body>
+</html>

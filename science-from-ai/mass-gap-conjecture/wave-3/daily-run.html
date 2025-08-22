@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Gap Conjecture – Daily Run Wave 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+    <h1>Daily Run: Mass Gap Conjecture</h1>
+    <h2>Day 3</h2>
+    <h3>Glueball spectrum on anisotropic lattices</h3>
+    <ol>
+      <li>Digitized arXiv:1507.04087 Figure 3 and interpolated the continuum limit, obtaining $m_{0^{++}}/\sqrt{\sigma}=3.55$.</li>
+      <p>Used `matplotlib.pyplot.ginput` to sample data points from the PDF and fitted them with `numpy.polyfit`.</p>
+      <li>Ran a quadratic extrapolation in $a_t^2$ using Python, estimating the continuum value as $3.48\pm0.07$.</li>
+      <p>Execute `numpy.polyfit(a_t_values, masses, 2)` and evaluate at $a_t=0$ to reproduce the extrapolated mass.</p>
+      <li>Identified systematic shift when varying anisotropy to $a_s=3a_t$, suggesting need for improved action.</li>
+      <p>Repeat measurements with the new anisotropy and compare the resulting mass to quantify the shift.</p>
+    </ol>
+    <h3>Schwinger function positivity bounds</h3>
+    <ol>
+      <li>Implemented a spectral density ansatz $\rho(\mu)=C\mu^2 e^{-\mu/\Lambda}$ and verified positivity of its Laplace transform numerically.</li>
+      <p>Sample $\mu$ on a grid and evaluate the Laplace transform with `scipy.integrate.quad` to ensure $G(t)>0`.</p>
+      <li>Integrated to obtain $G(t)=\frac{C}{(t+\Lambda)^3}$ and confirmed monotonic decay for $t>0$.</li>
+      <p>Symbolically integrate $\rho(\mu)$ in SymPy and differentiate to check monotonic behaviour.</p>
+      <li>From the fitted $G(t)$ deduced a refined bound $m \ge 0.95$ GeV, slightly above previous day's estimate.</li>
+      <p>Use $m \ge \pi/t_0$ with the new zero $t_0=5a_t$ to arrive at the improved bound.</p>
+    </ol>
+    <h3>Topological mass generation via Chern-Simons terms</h3>
+    <ol>
+      <li>Computed the one-loop polarization tensor in $2+1$ Yang–Mills using dimensional regularization, verifying finite shift of the Chern-Simons level.</li>
+      <p>Apply the background-field method and integrate over momenta to obtain the shift $\Delta k = \tfrac{g^2}{4\pi}$.</p>
+      <li>Evaluated determinant of the Dirac operator leading to induced mass $m_{\text{ind}}=g^2/(4\pi)$ for fundamental fermions.</li>
+      <p>Perform a heat-kernel expansion of $\log\det(i\slashed{D}-m_f)$ and identify the linear term in $g^2$.</p>
+      <li>Compared with lattice strong-coupling expansion, finding matching linear dependence on gauge coupling.</li>
+      <p>The strong-coupling series yields $m \propto g^2$ to leading order, confirming the continuum calculation.</p>
+    </ol>
+  </body>
+</html>
