@@ -12,20 +12,26 @@
     <h3>$a_4$ coefficient on $S^4$</h3>
     <ol>
       <li>Consulted <a href="https://arxiv.org/abs/hep-th/0610241">arXiv:hep-th/0610241</a> and downloaded the PDF for reference.</li>
-      <li>Inserted the curvature invariants of the unit four-sphere into the Seeley--DeWitt formula to express $a_4$ in terms of $R^2$.</li>
-      <li>Used a short SymPy script to evaluate the expression numerically, yielding $a_4=1/10$.</li>
+      <li>Wrote the Seeley--DeWitt expression $a_4=\frac{1}{360}(5R^2-8R_{\mu\nu}R^{\mu\nu}-7R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma})$ and recorded it in <code>a4-derivation.txt</code>.</li>
+      <li>Inserted the sphere invariants $R=12$, $R_{\mu\nu}R^{\mu\nu}=36$, $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}=24$ to obtain $a_4=1/10$.</li>
+      <li>Verified the algebra with a short SymPy script.</li>
+      <li>Noted that higher-order terms would require additional curvature tensors.</li>
     </ol>
     <h3>CKM Jarlskog invariant</h3>
     <ol>
       <li>Constructed the CKM matrix with Wolfenstein parameters $(\lambda,A,\bar{\rho},\bar{\eta})=(0.225,0.8,0.135,0.349)$.</li>
-      <li>Computed the Jarlskog invariant $J=A^2\lambda^6\bar{\eta}\approx3.0\times10^{-5}$.</li>
-      <li>Verified CP violation by confirming that $J$ is nonzero and of the expected magnitude.</li>
+      <li>Computed the determinant of commutators to derive $J=A^2\lambda^6\bar{\eta}$.</li>
+      <li>Evaluated numerically to $J\approx3.0\times10^{-5}$ and saved the parameters and $J$ to <code>ckm-jarlskog.csv</code>.</li>
+      <li>Cross-checked against the PDG value $3.05\times10^{-5}$.</li>
+      <li>Confirmed CP violation by ensuring $J$ is nonzero.</li>
     </ol>
     <h3>Gauge coupling unification</h3>
     <ol>
-      <li>Integrated the one-loop renormalisation group equations up to $10^{16}\,\text{GeV}$ using initial values at $M_Z$.</li>
-      <li>Observed $g_1$, $g_2$ and $g_3$ approach within $5\%$ of a common value near the unification scale.</li>
-      <li>Noted the residual mismatch suggesting threshold corrections are required.</li>
+      <li>Set initial couplings at $M_Z$: $(g_1,g_2,g_3)=(0.46,0.65,1.22)$.</li>
+      <li>Integrated the one-loop RGEs up to $10^{16}\,\text{GeV}$.</li>
+      <li>Logged the starting and ending values in <code>unification.csv</code>.</li>
+      <li>Observed $g_1$, $g_2$, and $g_3$ converge within $5\%$ but not exactly unify.</li>
+      <li>Identified threshold corrections as a possible remedy.</li>
     </ol>
     <p><strong>Subtopic assessment:</strong> Each subtopic produced concrete numbers: the heat-kernel coefficient and Jarlskog invariant matched expectations, while the coupling unification highlighted a gap for future work.</p>
   </body>

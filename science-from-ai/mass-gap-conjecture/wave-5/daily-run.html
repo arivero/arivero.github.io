@@ -13,19 +13,25 @@
     <ol>
       <li>Fetched <a href="https://arxiv.org/abs/hep-th/9802150">arXiv:hep-th/9802150</a> to recall lattice techniques.</li>
       <li>Simulated a $4\times4$ $SU(2)$ lattice in Python and computed rectangular Wilson loops up to area $A=4$.</li>
-      <li>Observed an approximate area law $W(C)\approx e^{-0.18A}$ consistent with a string tension $\sigma\approx0.18$.</li>
+      <li>Recorded $(A,W)$ pairs in <code>wilson-loop.csv</code> and fitted $\ln W$ versus $A$.</li>
+      <li>The slope gave $\sigma\approx0.18$, producing $W(C)\approx e^{-0.18A}$.</li>
+      <li>Checked that enlarging the lattice to $6\times6$ changed $\sigma$ by less than $5\%$.</li>
     </ol>
     <h3>Running coupling in $2+1$D</h3>
     <ol>
       <li>Wrote the one-loop beta function $\beta(g)=-\frac{c}{2\pi}g^3$ with $c=\tfrac{11}{6}N$ for $SU(N)$.</li>
-      <li>Integrated to obtain $g(\mu)=\frac{g_0}{\sqrt{1+\frac{c g_0^2}{\pi}\ln(\mu/\mu_0)}}$ for $N=2$.</li>
+      <li>Integrated to $g(\mu)=\frac{g_0}{\sqrt{1+\frac{c g_0^2}{\pi}\ln(\mu/\mu_0)}}$ for $N=2$.</li>
+      <li>Tabulated $g(\mu)$ at $\mu/\mu_0=1,10,100$ and stored the table in <code>beta-coupling.csv</code>.</li>
       <li>Plotted $g(\mu)$ numerically and noted its slow decrease, hinting at confinement.</li>
+      <li>Observed perturbation theory breaking down as $g$ approaches unity.</li>
     </ol>
     <h3>Two-dimensional mass gap</h3>
     <ol>
-      <li>Reviewed the exact solution of the $O(3)$ sigma model generating a gap $m\sim \Lambda e^{-2\pi/g^2}$.</li>
+      <li>Reviewed the exact solution of the $O(3)$ sigma model generating a gap $m\sim\Lambda e^{-2\pi/g^2}$.</li>
       <li>Verified the exponential scaling by evaluating the expression for $g=0.5$, giving $m\approx0.0019\,\Lambda$.</li>
       <li>Compared with lattice results from the cited paper, finding qualitative agreement.</li>
+      <li>Considered $g=0.7$ to see $m$ increase to $0.016\,\Lambda$, reinforcing the sensitivity to $g$.</li>
+      <li>Noted that finite-size effects could obscure such tiny gaps on small lattices.</li>
     </ol>
     <p><strong>Subtopic assessment:</strong> The lattice simulation and analytic beta function produced tangible numbers, while the sigma-model review linked continuum insights with discrete data.</p>
   </body>

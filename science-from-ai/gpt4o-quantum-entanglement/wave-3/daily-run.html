@@ -11,21 +11,27 @@
     <p><strong>Subtopics:</strong> The focus for this wave spans the CHSH inequality, the entropy of the three-qubit $W$ state, and the negativity under partial transposition.</p>
     <h3>CHSH inequality</h3>
     <ol>
-      <li>Downloaded the review <a href="https://arxiv.org/abs/quant-ph/9705052">arXiv:quant-ph/9705052</a> for background.</li>
+      <li>Downloaded <a href="https://arxiv.org/abs/quant-ph/9705052">arXiv:quant-ph/9705052</a> for background.</li>
       <li>Constructed the Bell state $|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2$ and the CHSH operator in Python.</li>
-      <li>Evaluated the expectation value $\langle B\rangle=2\sqrt2$, violating the classical bound of $2$.</li>
+      <li>Diagonalised the operator to confirm the Tsirelson bound $2\sqrt2$.</li>
+      <li>Evaluated $\langle B\rangle=2.8284$ and logged it to <code>entanglement-data.csv</code>.</li>
+      <li>Verified classical strategies never exceed $2$.</li>
     </ol>
     <h3>$W$-state entropy</h3>
     <ol>
       <li>Represented the three-qubit $W$ state and traced out two qubits to obtain the single-qubit density matrix.</li>
-      <li>Computed its von Neumann entropy $S=-\text{Tr}(\rho\log_2\rho)=0.918$ bits.</li>
-      <li>Confirmed symmetry by cycling which qubits were traced without changing $S$.</li>
+      <li>Computed its eigenvalues $(2/3,1/3)$ and entropy $S=-\text{Tr}(\rho\log_2\rho)=0.918$ bits.</li>
+      <li>Recorded the entropy in <code>entanglement-data.csv</code>.</li>
+      <li>Cycled which qubits were traced; eigenvalues remained unchanged.</li>
+      <li>Confirmed numerical stability to $10^{-6}$.</li>
     </ol>
     <h3>Negativity</h3>
     <ol>
       <li>Constructed a random two-qubit mixed state and took the partial transpose with respect to the second qubit.</li>
       <li>Found eigenvalues numerically and summed the absolute values of the negative ones to obtain a negativity of $0.12$.</li>
-      <li>Verified that a separable state produced zero negativity as a control.</li>
+      <li>Added the value to <code>entanglement-data.csv</code> for comparison.</li>
+      <li>Checked a separable state which yielded zero negativity.</li>
+      <li>Noted sensitivity to numerical precision in near-separable cases.</li>
     </ol>
     <p><strong>Subtopic assessment:</strong> Each computation yielded clear quantitative measures, making all three subtopics productive.</p>
   </body>
